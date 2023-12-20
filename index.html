@@ -1,0 +1,258 @@
+<!-- 
+
+    Mustafa EREN
+
+    Web Tasarımı Temelleri Proje Ödevi
+    13.12.2023
+
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vanlife</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600;700;800;900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@100;200;300;400;500;600;700;800;900" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/style/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+
+</head>
+
+<body>
+
+    <header>
+
+        <nav>
+            <ul>
+                <li><a href="#hakkimizda">About Us</a></li>
+                <li><a href="#bizlerkimiz">Who are we?</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li class="header-logo">
+                    <a href="#vanlife">
+                        <img src="./assets/images/logo.png" alt="Vanlife">
+                    </a>
+                </li>
+                <li><a href="#videolarimiz">Our Videos</a></li>
+                <li><a href="posts.html">Pictures From Our Journey</a></li>
+            </ul>
+        </nav>
+
+        <nav class="mobile-header">
+            <ul>
+                <li class="header-logo">
+                    <a href="#vanlife">
+                        <img src="./assets/images/logo.png" alt="Vanlife">
+                    </a>
+                </li>
+                <li class="header-nav-toggle">
+                    <a id="nav-toggle-button">
+                        <i class="bi bi-list toggle-icon"></i>
+                    </a>
+                </li>
+            </ul>
+
+        </nav>
+
+    </header>
+    <div class="mobile-nav">
+        <ul>
+            <li><a href="#vanlife">Home</a></li>
+            <li><a href="#hakkimizda">About Us</a></li>
+            <li><a href="#bizlerkimiz">Who are we?</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#videolarimiz">Our Videos</a></li>
+            <li><a href="posts.html">Pictures From Our Journey</a></li>
+        </ul>
+    </div>
+
+    <script>
+        document.getElementById('nav-toggle-button').addEventListener('click', function () {
+            const nav = document.querySelector('.mobile-nav');
+            const toggleIcon = document.querySelector('.toggle-icon');
+
+            if (nav.classList.contains("show")) {
+                nav.classList.remove("show");
+                toggleIcon.classList.add("bi-list");
+                toggleIcon.classList.remove("bi-x-lg");
+            } else {
+                nav.classList.add("show");
+                toggleIcon.classList.remove("bi-list");
+                toggleIcon.classList.add("bi-x-lg");
+            }
+        });
+
+        var mobileNavLinks = document.querySelectorAll('.mobile-nav a');
+
+        mobileNavLinks.forEach(function (link) {
+            link.addEventListener('click', function (event) {
+                const nav = document.querySelector('.mobile-nav');
+                const toggleIcon = document.querySelector('.toggle-icon');
+                
+                nav.classList.remove("show");
+                toggleIcon.classList.add("bi-list");
+                toggleIcon.classList.remove("bi-x-lg");
+            });
+        });
+    </script>
+
+    <main>
+        <section class="header-section" id="vanlife">
+            <video width="100%" height="100%" autoplay muted loop poster="./assets/images/cover.jpg">
+                <source src="./assets/videos/header.mp4" type="video/mp4">
+            </video>
+            <div class="header-bottom-section">
+                <h1>Vanlife</h1>
+                <p>
+                    Hello! We created the Vanlife platform to remember the memories we spent with our caravan and for you to share our adventures through our eyes. Being on the road gives us the chance to enjoy the freedom and the moment. Everywhere we go, we not only discover new landscapes but also make new friends. For us, leaving the cities behind and escaping to nature is actually a journey of inner discovery.
+                </p>
+            </div>
+        </section>
+        <section class="aboutus-section" id="hakkimizda">
+            <div class="aboutus-content-section">
+                <h1>About Us</h1>
+                <p>Hello, we are the Vanlife team! We are a family that came together on the road and opened caravan doors for each other. Vanlife means more to us than just the stuff we carry. You will find a piece of us in every story and video we share on this platform. For us, hitting the road is not just a change of location, but also a journey of inner discovery. Each milestone is the beginning of a path that brings us closer to each other. Meet us, share our story, because Vanlife is not just a journey, it is a way of life.</p>
+
+                <p>We, the Vanlife team, believe in the power of sharing the challenges, laughs and memories we encounter on the road. We are building a community, not just a website. Each of us are individuals from different corners, with different stories. But we all unite around a common passion: freedom, exploration and enjoying life. 🚐✨🌍</p>
+            </div>
+            <div class="aboutus-image-section"></div>
+        </section>
+        <section class="whoarewe-section" id="bizlerkimiz">
+            <div class="whoarewe-content-section">
+                <h1>Who are we?</h1>
+                <p>We are actually just a group of friends, a community who hit the road with our caravans and leave our mark together on this adventure. In the busyness of our own lives, in the hustle and bustle of city life, we come together and open the doors of our caravans. On this platform, we share our travel stories in a sincere and sincere way. Who are we? We are just a few friends, a group of adventurers traveling in different vehicles, on different routes, but sharing the same passion.</p>
+
+                <p>Vanlife is actually just a slice of our own lives. While enjoying our time on the road, we support each other and share our experiences. If you want to be a part of this simple and sincere community, welcome! Who are we? We are just friends and caravanners and we welcome you to join us! 🚐✨🛤️</p>
+            </div>
+            <div class="whoarewe-image-section"></div>
+        </section>
+        <section class="blogs-section" id="blog">
+            <h1 class="section-title">Blog</h1>
+            <div class="blog-posts">
+
+                <div class="blog">
+                    <div class="blog-thumbnail">
+                        <a href="#"><img src="./assets/images/cover.jpg"></a>
+                    </div>
+                    <div class="blog-content">
+                        <a href="#">Blog Title</a>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur cupiditate vero quisquam eligendi iure sint inventore repellat minus unde magnam.</p>
+                    </div>
+                </div>
+
+                <div class="blog">
+                    <div class="blog-thumbnail">
+                        <a href="#"><img src="./assets/images/aboutus.jpg"></a>
+                    </div>
+                    <div class="blog-content">
+                        <a href="#">Blog Title</a>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat officia possimus repellendus debitis vero ipsam in minima unde pariatur ipsa, ratione</p>
+                    </div>
+                </div>
+
+                <div class="blog">
+                    <div class="blog-thumbnail">
+                        <a href="#"><img src="./assets/images/whoarewe.jpg"></a>
+                    </div>
+                    <div class="blog-content">
+                        <a href="#">Blog Title</a>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur cupiditate vero quisquam eligendi iure sint inventore repellat minus unde magnam.</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="section-footer">
+                <a class="blog-more-button" href="#blog">Other Posts</a>
+            </div>
+        </section>
+        <section class="videos-section" id="videolarimiz">
+            <h1 class="section-title">Our Videos</h1>
+            <div class="videos">
+
+                <div class="video">
+                    <a href="https://www.youtube.com/watch?v=hYIp9sJyf7g" target="_blank">
+                        <img src="./assets/images/video-1.jpg">
+                        <span>Volkswagen Camper Van</span>
+                    </a>
+                </div>
+
+                <div class="video">
+                    <a href="https://www.youtube.com/watch?v=-gZC02MG_fo" target="_blank">
+                        <img src="./assets/images/video-2.jpg">
+                        <span>Camping in an Alaskan Survival Cabin</span>
+                    </a>
+                </div>
+
+                <div class="video">
+                    <a href="https://www.youtube.com/watch?v=XTcPQElzqVY" target="_blank">
+                        <img src="./assets/images/video-3.jpg">
+                        <span>Camper Van Road Trip</span>
+                    </a>
+                </div>
+
+                <div class="video">
+                    <a href="https://www.youtube.com/watch?v=atjr4KX2ppc" target="_blank">
+                        <img src="./assets/images/video-4.jpg">
+                        <span>9.000KM Europe Roadtrip</span>
+                    </a>
+                </div>
+
+                <div class="video">
+                    <a href="https://www.youtube.com/watch?v=PqZtT_7NpRg" target="_blank">
+                        <img src="./assets/images/video-5.jpg">
+                        <span>Road Trip Inspiration</span>
+                    </a>
+                </div>
+
+                <div class="video">
+                    <a href="https://www.youtube.com/watch?v=XXXtJ8NJKo8" target="_blank">
+                        <img src="./assets/images/video-6.jpg">
+                        <span>Cozy Vanlife Gaming Van Tour</span>
+                    </a>
+                </div>
+
+            </div>
+            <div class="section-footer">
+                <a class="blog-more-button" href="https://youtube.com">Other Videos</a>
+            </div>
+        </section>
+    </main>
+
+
+    <script>
+
+        function changeHeaderColor(color = "#f8e3b9", hoverColor = "#c44a28") {
+            document.body.style.setProperty('--header-color', color);
+            document.body.style.setProperty('--header-hover-color', hoverColor);
+        }
+
+        var main = document.querySelector('main');
+
+        main.addEventListener('scroll', () => {
+            const mainHeight = main.clientHeight;
+            const scrollTop = main.scrollTop + (mainHeight / 2);
+            const currentPage = Math.floor(scrollTop / mainHeight) + 1;
+
+            if (currentPage == 1) {
+                changeHeaderColor();
+            } else if (currentPage == 2) {
+                changeHeaderColor("#E4E4D0", "#899f76");
+            } else if (currentPage == 3) {
+                changeHeaderColor("#FDE5EC", "#E48586");
+            } else if (currentPage == 4 || currentPage == 5) {
+                changeHeaderColor("#E4CDA7", "#8E806A");
+            } else {
+                changeHeaderColor();
+            }
+
+
+        });
+    </script>
+
+</body>
+
+</html>

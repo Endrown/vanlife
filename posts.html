@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vanlife</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600;700;800;900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@100;200;300;400;500;600;700;800;900" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/style/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+
+</head>
+
+<body class="no-snap">
+
+    <header>
+
+        <nav>
+            <ul>
+                <li><a href="index.html#hakkimizda">About Us</a></li>
+                <li><a href="index.html#bizlerkimiz">Who are we?</a></li>
+                <li><a href="index.html#blog">Blog</a></li>
+                <li class="header-logo">
+                    <a href="index.html#vanlife">
+                        <img src="./assets/images/logo.png" alt="Vanlife">
+                    </a>
+                </li>
+                <li><a href="index.html#videolarimiz">Our Videos</a></li>
+                <li><a href="posts.html">Pictures From Our Journey</a></li>
+            </ul>
+        </nav>
+
+        <nav class="mobile-header">
+            <ul>
+                <li class="header-logo">
+                    <a href="index.html#vanlife">
+                        <img src="./assets/images/logo.png" alt="Vanlife">
+                    </a>
+                </li>
+                <li class="header-nav-toggle">
+                    <a id="nav-toggle-button">
+                        <i class="bi bi-list toggle-icon"></i>
+                    </a>
+                </li>
+            </ul>
+
+        </nav>
+
+    </header>
+    <div class="mobile-nav">
+        <ul>
+            <li><a href="index.html#vanlife">Home</a></li>
+            <li><a href="index.html#hakkimizda">About Us</a></li>
+            <li><a href="index.html#bizlerkimiz">Who are we?</a></li>
+            <li><a href="index.html#blog">Blog</a></li>
+            <li><a href="index.html#videolarimiz">Our Videos</a></li>
+            <li><a href="posts.html">Pictures From Our Journey</a></li>
+        </ul>
+    </div>
+
+    <script>
+        document.getElementById('nav-toggle-button').addEventListener('click', function () {
+            const nav = document.querySelector('.mobile-nav');
+            const toggleIcon = document.querySelector('.toggle-icon');
+
+            if (nav.classList.contains("show")) {
+                nav.classList.remove("show");
+                toggleIcon.classList.add("bi-list");
+                toggleIcon.classList.remove("bi-x-lg");
+            } else {
+                nav.classList.add("show");
+                toggleIcon.classList.remove("bi-list");
+                toggleIcon.classList.add("bi-x-lg");
+            }
+        });
+
+        var mobileNavLinks = document.querySelectorAll('.mobile-nav a');
+
+        mobileNavLinks.forEach(function (link) {
+            link.addEventListener('click', function (event) {
+                nav.classList.remove("show");
+                toggleIcon.classList.add("bi-list");
+                toggleIcon.classList.remove("bi-x-lg");
+            });
+        });
+    </script>
+
+    <main class="no-snap">
+        <section class="posts-section" id="videolarimiz">
+            <h1 class="section-title">Pictures From Our Journey</h1>
+            <div class="posts">
+
+                <div class="post">
+                    <a href="https://instagram.com/erenmustafa0" target="_blank">
+                        <img src="./assets/images/video-1.jpg">
+
+                    </a>
+                </div>
+
+                <div class="post">
+                    <a href="https://instagram.com/erenmustafa0" target="_blank">
+                        <img src="./assets/images/video-2.jpg">
+                    </a>
+                </div>
+
+                <div class="post">
+                    <a href="https://instagram.com/erenmustafa0" target="_blank">
+                        <img src="./assets/images/video-5.jpg">
+                    </a>
+                </div>
+
+                <div class="post">
+                    <a href="https://instagram.com/erenmustafa0" target="_blank">
+                        <img src="./assets/images/video-3.jpg">
+                    </a>
+                </div>
+
+                <div class="post">
+                    <a href="https://instagram.com/erenmustafa0" target="_blank">
+                        <img src="./assets/images/video-3.jpg">
+                    </a>
+                </div>
+
+                <div class="post">
+                    <a href="https://instagram.com/erenmustafa0" target="_blank">
+                        <img src="./assets/images/video-1.jpg">
+                    </a>
+                </div>
+
+                <div class="post">
+                    <a href="https://instagram.com/erenmustafa0" target="_blank">
+                        <img src="./assets/images/video-4.jpg">
+                    </a>
+                </div>
+
+                <div class="post">
+                    <a href="https://instagram.com/erenmustafa0" target="_blank">
+                        <img src="./assets/images/video-5.jpg">
+                    </a>
+                </div>
+
+                <div class="post">
+                    <a href="https://instagram.com/erenmustafa0" target="_blank">
+                        <img src="./assets/images/video-6.jpg">
+                    </a>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+
+    <script>
+
+        function changeHeaderColor(color = "#f8e3b9", hoverColor = "#c44a28") {
+            document.body.style.setProperty('--header-color', color);
+            document.body.style.setProperty('--header-hover-color', hoverColor);
+        }
+
+        var main = document.querySelector('main');
+
+        main.addEventListener('scroll', () => {
+            const mainHeight = main.clientHeight;
+            const scrollTop = main.scrollTop + (mainHeight / 2);
+            const currentPage = Math.floor(scrollTop / mainHeight) + 1;
+
+            if (currentPage == 1) {
+                changeHeaderColor();
+            } else if (currentPage == 2) {
+                changeHeaderColor("#E4E4D0", "#899f76");
+            } else if (currentPage == 3) {
+                changeHeaderColor("#FDE5EC", "#E48586");
+            } else if (currentPage == 4 || currentPage == 5) {
+                changeHeaderColor("#E4CDA7", "#8E806A");
+            } else {
+                changeHeaderColor();
+            }
+
+
+        });
+    </script>
+
+</body>
+
+</html>
